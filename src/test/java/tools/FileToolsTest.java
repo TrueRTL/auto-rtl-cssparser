@@ -1,20 +1,18 @@
 package tools;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 /**
  * Created by seyed on 2/8/17.
  */
-class FileToolsTest {
-    @Test
-    void fileToStream() {
+public class FileToolsTest {
+    @org.junit.Test
+    public void fileToStream() throws Exception {
 
     }
 
-    @Test
-    void streamToString() {
+    @org.junit.Test
+    public void streamToString() throws Exception {
 
     }
 
