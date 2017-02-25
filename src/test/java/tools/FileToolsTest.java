@@ -1,6 +1,5 @@
 package tools;
 
-import org.hamcrest.CoreMatchers.*;
 import org.junit.Before;
 import org.junit.Test;
 

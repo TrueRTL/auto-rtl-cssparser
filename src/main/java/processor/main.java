@@ -38,6 +38,8 @@ public class main {
             throw new IOException("cant parse to string");
         }
 
+        cssFileString = tools.removeSpicialCharacter(cssFileString);
+
         List<Style> styles = new CssSplitter().styleSplitter(cssFileString);
 
         return styles;
