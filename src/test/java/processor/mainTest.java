@@ -1,6 +1,9 @@
 package processor;
 
+import models.Style;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +13,9 @@ import static org.junit.Assert.*;
 public class mainTest {
     @Test
     public void runSystem() throws Exception {
-        
+        List<Style> styles = new main().runSystem("style.css");
+
+        System.out.print(styles.toString());
     }
 
 }

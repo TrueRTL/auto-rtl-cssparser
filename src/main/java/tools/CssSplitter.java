@@ -25,8 +25,9 @@ public class CssSplitter {
         List<Style> styles = new ArrayList<Style>();
         for(String style : stylesAsString) {
 
-            Style newStyle = new Style();
+            Style newStyle = getStyle(style);
 
+            styles.add(newStyle);
         }
 
         return styles;
@@ -68,6 +69,8 @@ public class CssSplitter {
             pr.setPropertyName(keyValues[0]);
 
             pr.setValues(getValues(keyValues[1]));
+
+            property.add(pr);
         }
 
         return property;

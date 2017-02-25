@@ -43,6 +43,27 @@ public class FileTools {
         while ((length = inputStream.read(buffer)) != -1) {
             result.write(buffer, 0, length);
         }
+
         return result.toString("UTF-8");
+    }
+
+    /**
+     * this method will remove all character like \n or \t from the string of .css file.
+     * @param txtString
+     *  the string of .css file
+     * @return
+     *  string without character like \n or \t
+     */
+    public String removeSpicialCharacter(String txtString) {
+        String[] strs = txtString.split("");
+
+        for(int i=0;i<strs.length;i++) {
+            if(strs[i].equals("\n") || strs[i].equals("\t"))
+                strs[i] = "";
+        }
+
+        txtString = String.join("",strs);
+
+        return txtString;
     }
 }
